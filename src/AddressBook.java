@@ -3,11 +3,11 @@ public class AddressBook {
 
     public ArrayList buddies;
 
-    public AddressBook () {
-        buddies = new ArrayList ();
+    public AddressBook() {
+        buddies = new ArrayList();
     }
 
-    public void addBuddy (BuddyInfo bud) {
+    public void addBuddy(BuddyInfo bud) {
         if (buddies.add(bud)) {
             System.out.print("Buddy info added");
         } else {
@@ -15,12 +15,16 @@ public class AddressBook {
         }
     }
 
-    public void removeBuddy (BuddyInfo bud)
-    {
-        if(buddies.remove(bud)) {
+    public void removeBuddy(BuddyInfo bud) {
+        if (buddies.remove(bud)) {
             System.out.print("Buddy info removed");
         } else {
-            System.out.println ("Buddy info not removed");
+            System.out.println("Buddy info not removed");
         }
     }
+
+    public static void main(String[] args) {
+        System.out.println("Address Book");
+    }
+
 }
