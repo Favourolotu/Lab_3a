@@ -9,7 +9,7 @@ public class AddressBook {
 
     public void addBuddy(BuddyInfo bud) {
         if (buddies.add(bud)) {
-            System.out.print("Buddy info added");
+            System.out.println("Buddy info added");
         } else {
             System.out.println("Buddy info not added");
         }
@@ -17,14 +17,17 @@ public class AddressBook {
 
     public void removeBuddy(BuddyInfo bud) {
         if (buddies.remove(bud)) {
-            System.out.print("Buddy info removed");
+            System.out.println("Buddy info removed");
         } else {
             System.out.println("Buddy info not removed");
         }
     }
 
     public static void main(String[] args) {
-        System.out.println("Address Book");
+        BuddyInfo buddy = new BuddyInfo("Tom","carleton","613");
+        AddressBook addressBook = new AddressBook();
+        addressBook.addBuddy(buddy);
+        addressBook.removeBuddy(buddy);
     }
 
 }
